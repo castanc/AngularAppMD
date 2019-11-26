@@ -1,11 +1,343 @@
-<button mat-button>Hello World</button>
-<div class="mat-display-4">This is display 4</div>
-<div class="mat-display-3">This is display 3</div>
-<div class="mat-display-2">This is display 2</div>
-<div class="mat-display-1">This is display 1</div>
 
-<div class="mat-headline">mat-headline for h1</div>
-<div class="mat-title">mat-title for h2</div>
-<div class="mat-headline">mat-headline for h1</div>
-<div class="mat-subheading-2">mat-subheading for h3</div>
-<div class="mat-subheading-1">mat-subheading for h4</div>
+<mat-grid-list cols="2" rowHeight="40px"gutterSize="5">
+        <mat-grid-tile colspan="2">
+            <a href="https://youtu.be/jUfEn032IL8?t=5109">Cards 1:25:09</a>
+        </mat-grid-tile>
+    </mat-grid-list>
+
+
+    <mat-card>
+        <mat-card-title>
+            card title
+        </mat-card-title>
+        <mat-card-content>this is the card content</mat-card-content>
+        <mat-card-actions align="end">
+            <button mat-flat-button>login</button>
+        </mat-card-actions>
+    </mat-card>
+
+
+
+
+
+<mat-grid-list cols="2" rowHeight="40px"gutterSize="5">
+        <mat-grid-tile colspan="2">
+            <a href="https://youtu.be/jUfEn032IL8?t=49537">Accordions 1:22:33</a>
+        </mat-grid-tile>
+        <mat-grid-tile>Only one visible at atime</mat-grid-tile>
+        <mat-grid-tile>For multiple, use: accordion multiple-:true" </mat-grid-tile>
+    </mat-grid-list>
+
+    <mat-accordion>
+    <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Angular Material
+                </mat-panel-title>
+                <mat-panel-description>
+                    Total uration2 hours
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <p> This is the poanel content, add course details</p>
+            <mat-action-row>
+                <button mat-button>Enroll</button>
+            </mat-action-row>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Angular Fundamedntals
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        Total uration 3 hours
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+                <p> This is the poanel content, add course details</p>
+                <mat-action-row>
+                    <button mat-button>Enroll</button>
+                </mat-action-row>
+            </mat-expansion-panel>
+        </mat-accordion>        
+
+
+
+<mat-grid-list cols="2" rowHeight="40px"gutterSize="5">
+        <mat-grid-tile colspan="2">
+            <a href="https://youtu.be/jUfEn032IL8?t=4787">Expansion Panel 1:19:47</a>
+        </mat-grid-tile>
+   
+    </mat-grid-list>
+    <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Angular Fundamedntals
+                </mat-panel-title>
+                <mat-panel-description>
+                    Total uration 3 hours
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <p> This is the poanel content, add course details</p>
+            <mat-action-row>
+                <button mat-button>Enroll</button>
+            </mat-action-row>
+        </mat-expansion-panel>
+
+<div>
+    
+<mat-grid-list cols="2" rowHeight="40px"gutterSize="5">
+
+    <mat-grid-tile colspan="2">
+        <a href="https://youtu.be/jUfEn032IL8?t=4490">Grids 1:14:50</a>
+    </mat-grid-tile>
+
+    <mat-grid-tile>Tile 2</mat-grid-tile>
+    <mat-grid-tile>Tile 3</mat-grid-tile>
+    <mat-grid-tile>Tile 4</mat-grid-tile>
+</mat-grid-list>
+
+</div>
+
+<div>
+    <a href="https://youtu.be/jUfEn032IL8?t=4204"> Lists 1:10:04</a>
+    <!--
+    <mat-list dense>
+        <mat-list-item>Item 1</mat-list-item>
+        <mat-list-item>Item 2</mat-list-item>
+        <mat-list-item>Item 3</mat-list-item>
+    </mat-list>
+
+    <mat-nav-list>
+        <mat-list-item href="#"> Home </mat-list-item>        
+        <mat-list-item href="#"> About </mat-list-item>        
+        <mat-list-item href="#"> Services </mat-list-item>        
+    </mat-nav-list>
+    -->
+
+    <mat-list>
+        <mat-list-item>
+            <mat-icon matListIcon>home</mat-icon>
+            <h3 matLine>Line</h3>
+            <p matLine>Line</p>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>
+                <mat-icon matListIcon>folder</mat-icon>
+                <h3 matLine>Line</h3>
+                <p matLine>Line</p>
+            </mat-list-item>
+        </mat-list>
+</div>
+
+<div>
+    <a href="https://youtu.be/jUfEn032IL8?t=3860">Dynamic menus 1:04:20</a>
+    <mat-menu #lazyMenu="matMenu">
+        <ng-template matMenuContent let-name="name" let-hobby="hobby">
+            <button mat-menu-item>settings</button>
+            <button mat-menu-item>Log Out {{name}}</button>
+            <button mat-menu-item>Hobby is {{hobby}}</button>
+
+        </ng-template>
+    </mat-menu>
+
+    <button [matMenuTriggerFor]="lazyMenu"
+    [matMenuTriggerData]="{name: 'Vishwas', hobby: 'football'}"
+    >Vishwas</button>
+
+    <button [matMenuTriggerFor]="lazyMenu"
+        [matMenuTriggerData]="{name: 'Codevolution', hobby: 'teaching'}"
+    >Codevolution</button>
+
+</div>
+
+<div>
+    <a href="https://youtu.be/jUfEn032IL8?t=3644">Nested menus 1:02:00</a>
+    <mat-menu #subMenu="matMenu">
+        <button mat-menu-item>Angular</button>
+        <button mat-menu-item>React</button>
+        <button mat-menu-item>View</button>
+    </mat-menu>
+
+</div>
+
+<div>
+    <a href="https://youtu.be/jUfEn032IL8?t=3460">Menus</a>
+    <mat-menu #appMenu="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="subMenu" 
+        xPosition="after" yPosition="above"
+        >Front End</button>
+        <button mat-menu-item>Back End</button>
+    </mat-menu>
+
+    <button mat-flat-button [matMenuTriggerFor]="appMenu"
+    class="center"
+    >Menu</button>
+
+</div>
+<br>
+<mat-sidenav-container>
+        <mat-sidenav  #sidenav mode="push" [(opened)]="opened"
+        (opened)="log('opened')"
+        (closed)="log('closed')"
+        >Sidenav</mat-sidenav>
+        <mat-sidenav-content>
+            <div>Main
+                        <a href="https://youtu.be/jUfEn032IL8?t=2872">sidenav 47:52</a>
+                        <h2> modes: over push, side</h2>
+            </div>                                        
+        </mat-sidenav-content>
+
+    </mat-sidenav-container>
+    <button (click)="opened=!opened">Open SIde Nav</button>
+    <button (click)="sidenav.open()">Open</button>
+    <button (click)="sidenav.close()">Close</button>
+    <button (click)="sidenav.toggle()">Toggle</button>
+
+
+
+
+<div>
+        <h2>navBar 44:22</h2>
+        <a href="https://youtu.be/jUfEn032IL8?t=2662">nav bar 44:22</a>
+    
+    <mat-toolbar color="primary" class="navBar">
+        <div>Codevolution</div>
+        <div>
+            <span>Home</span>
+            <span>About</span>
+            <span>Services</span>
+        </div>
+    </mat-toolbar>
+    
+    
+    </div>
+    <br>
+    
+    <div>
+    <h2>progress spinner 39:56</h2>
+        <mat-progress-spinner value="40"></mat-progress-spinner>
+    <h2>infinite spinner</h2>
+    <mat-spinner *ngIf="showSpinner">
+    </mat-spinner>
+    <button 
+    (click)="loadData()">load Data</button>
+    </div>
+    <br>
+    
+    <div>
+        <h2>badges 23:52</h2>
+        <div>
+        <span [matBadge]="notifications">Notifications</span>
+        </div>
+        <div>
+        <span matBadge="5" matBadgePosition="below before">Notifications</span>
+        </div>
+        <div>
+            <span matBadge="5" matBadgePosition="below after">Notifications</span>
+        </div>
+        <div>
+            <span matBadge="5" matBadgePosition="above before">Notifications</span>
+        </div>
+        <br>
+        <h2>badge size 35:25</h2>
+        <div>
+        <span matBadge="5" matBadgeColor="primary"  matBadgeSize="small">Notifications small</span>
+        </div>
+        <div>
+            <span matBadge="5" matBadgeColor="accent" matBadgeSize="medium">Notifications  medium</span>
+            </div>
+            <div>
+                <span matBadge="5" matBadgeColor="warn" matBadgeSize="large">Notifications large</span>
+                </div>
+    
+         <h2>badge avoid overlap 37:02</h2>
+         <div>
+            <span matBadge="5" matBadgeColor="warn" matBadgeSize="large" matBadgeOverlap ="false">Notifications large</span>
+            </div>
+    
+            <h2>Conditional badge 38:53. based in component variable, when zero is hidden</h2>
+            <div>
+               <span [matBadge]="notifications" matBadgeHidden="notifications==0" matBadgeColor="warn" matBadgeSize="large" matBadgeOverlap ="false">Notifications large</span>
+               </div>
+       
+    
+    <br>
+    
+    <div>
+        <h2>MatIcon 30:06</h2>
+        <a href="https://materiail.io/tools/icons">material.io.tools.icons</a>
+        <mat-icon color="primary">grade</mat-icon>
+    </div>
+    
+    <div>
+        <h2>MatButtonToggleGroup 27:03</h2>
+        <mat-button-toggle-group #toggleGroup="matButtonToggleGroup">
+            <mat-button-toggle value="angular">Angular</mat-button-toggle>        
+            <mat-button-toggle value = "react"  >React</mat-button-toggle>        
+            <mat-button-toggle value="vue">Vue</mat-button-toggle>        
+        </mat-button-toggle-group>
+        {{toggleGroup.value}}
+    
+        <h2>MatButtonToggleGroup Multiple Select 28:27</h2>
+        <mat-button-toggle-group #toggleGroup2="matButtonToggleGroup" multiple>
+            <mat-button-toggle value="angular">Angular</mat-button-toggle>        
+            <mat-button-toggle value = "react"  >React</mat-button-toggle>        
+            <mat-button-toggle value="vue">Vue</mat-button-toggle>        
+        </mat-button-toggle-group>
+        {{toggleGroup2.value}}
+    
+    
+    </div>
+    <br>
+    
+    
+    
+    <div>
+        <h2>MatButtonToggle 25:09</h2>
+        <mat-button-toggle #toggleBtn checked>Toggle</mat-button-toggle>
+        {{toggleBtn.checked}}
+    
+        <h2>MatButtonToggle DisableRipple effect 25:45</h2>
+        <mat-button-toggle #toggleBtn2 checked disableRipple>Toggle No Ripple</mat-button-toggle>
+        {{toggleBtn2.checked}}
+    
+    </div>
+    <!--button colors-->
+    <div>
+        <button color="primary" mat-raised-button> mat-raised-button primary</button>
+        <button color="accent" mat-raised-button>mat-raised-button accent</button>
+        <button color="warn" disableRipple mat-raised-button>mat-raised-button warn</button>
+    </div>
+    
+    
+    <!--circular buttons-->
+    <div>
+        <button mat-icon-button> mat-icon-button</button>
+        <button mat-fab>mat-fab</button>
+        <button mat-mini-fab>mat-mini-fab</button>
+    </div>
+    
+    <!--buttons-->
+    <button mat-button>mat-button</button>
+    <button mat-raised-button>mat-raised-button</button>
+    <button mat-flat-button>mat-flat-button</button>
+    <button mat-stroke-button>mat-stroke-button</button>
+    
+    
+    
+    <div class="mat-display-4">This is display 4</div>
+    <div class="mat-display-3">This is display 3</div>
+    <div class="mat-display-2">This is display 2</div>
+    <div class="mat-display-1">This is display 1</div>
+    
+    <div class="mat-headline">mat-headline for h1</div>
+    <div class="mat-title">mat-title for h2</div>
+    <div class="mat-headline">mat-headline for h1</div>
+    <div class="mat-subheading-2">mat-subheading for h3</div>
+    <div class="mat-subheading-1">mat-subheading for h4</div>
+    
+    
+    <div class="mat-body-1">mat-body-1</div>
+    <div class="mat-body-2">mat-body-2 bold</div>
+    <div class="mat-caption">mat-caption</div>
+    
+    
