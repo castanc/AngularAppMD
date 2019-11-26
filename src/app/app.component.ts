@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { SidenavExampleComponent } from './sidenav-example/sidenav-example.component'
-
 
 @Component({
   selector: 'app-root',

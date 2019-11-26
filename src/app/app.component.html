@@ -1,5 +1,21 @@
 
 <mat-grid-list cols="2" rowHeight="40px"gutterSize="5">
+    <mat-grid-tile colspan="2">
+        <a href="https://youtu.be/jUfEn032IL8?t=5291">Tabs 1:28:11</a>
+    </mat-grid-tile>
+</mat-grid-list>
+
+<mat-tab-group #tabRef (selectedTabChange)="log(tabRef.selectedIndex">
+    <mat-tab label="Angular">Angular content</mat-tab>
+    <mat-tab label="React">React content</mat-tab>
+    <mat-tab label="View">View content</mat-tab>
+</mat-tab-group>
+{{tabRef.selectedIndex}}
+
+
+
+
+<mat-grid-list cols="2" rowHeight="40px"gutterSize="5">
         <mat-grid-tile colspan="2">
             <a href="https://youtu.be/jUfEn032IL8?t=5109">Cards 1:25:09</a>
         </mat-grid-tile>
