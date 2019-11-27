@@ -1,11 +1,401 @@
 
+
+<mat-grid-list cols="2" rowHeight="40px"gutterSize="5" >
+        <mat-grid-tile colspan="2">
+            <a href="https://youtu.be/jUfEn032IL8?t=8564" target="blank">
+              snack bar customized with another component 2:22:44
+            </a>
+        </mat-grid-tile>
+    </mat-grid-list>
+    <button mat-button (click)="openCustomSnackBar()">Cusstom snack bar</button>
+
+
+
+<mat-grid-list cols="2" rowHeight="40px"gutterSize="5" >
+        <mat-grid-tile colspan="2">
+            <a href="https://youtu.be/jUfEn032IL8?t=8107" target="blank">
+              snack bar 2:15:07 (notifications)
+            </a>
+        </mat-grid-tile>
+    </mat-grid-list>
+    <button mat-button (click)="openSnackBar('item deleted')">Open SnackBar</button>
+
+    <button mat-button (click)=
+        "openSnackBar2('item deleted with action, autoclose','Dismiss')">
+        SnackBar Action AUtoClose</button>
+
+    <button mat-button (click)="openSnackBar3('Item deleted','Undo')">
+        Delete</button>
+
+
+<mat-grid-list cols="2" rowHeight="40px"gutterSize="5" >
+        <mat-grid-tile colspan="2">
+            <a href="https://youtu.be/jUfEn032IL8?t=7911" target="blank">
+               Tooltip 2:11:51
+            </a>
+        </mat-grid-tile>
+    </mat-grid-list>
+    
+    
+    
+    <button mat-raised-button matTooltip="this is the tooltipo"
+    matTooltipPosition = "after"
+    >Hello</button>
+
+    <button mat-raised-button matTooltip="this is the tooltipo"
+    matTooltipPosition = "after"
+    matTooltipShowDelay="2000"
+    >Hello tooltip withj delay</button>
+
+
+
+<mat-grid-list cols="2" rowHeight="40px"gutterSize="5" >
+        <mat-grid-tile colspan="2">
+            <a href="https://youtu.be/jUfEn032IL8?t=7829" target="blank">
+               Date picker filter days of week 2:10:29
+            </a>
+        </mat-grid-tile>
+    </mat-grid-list>
+
+    <mat-form-field>
+            <input matInput [matDatepicker]="myDatePicker4" 
+            [matDatepickerFilter]="dateFilter">
+            <mat-datepicker-toggle matSuffix [for]="myDatePicker4">
+                <mat-datepicker #myDatePicker4 ></mat-datepicker>
+            </mat-datepicker-toggle>
+        </mat-form-field>    
+        
+
+
+
+
+<mat-grid-list cols="2" rowHeight="40px"gutterSize="5" >
+        <mat-grid-tile colspan="2">
+            <a href="https://youtu.be/jUfEn032IL8?t=7746" target="blank">
+               Date picker date range 2:09:06
+            </a>
+        </mat-grid-tile>
+    </mat-grid-list>
+
+    <mat-form-field>
+            <input matInput [matDatepicker]="myDatePicker3" [min]="minDate" [max]="maxDate">
+            <mat-datepicker-toggle matSuffix [for]="myDatePicker3">
+                <mat-datepicker #myDatePicker3 ></mat-datepicker>
+            </mat-datepicker-toggle>
+        </mat-form-field>    
+        
+
+
+
+<mat-grid-list cols="2" rowHeight="40px"gutterSize="5" >
+        <mat-grid-tile colspan="2">
+            <a href="https://youtu.be/jUfEn032IL8?t=7723" target="blank">
+               Date picker startview year 2:08:43
+            </a>
+        </mat-grid-tile>
+    </mat-grid-list>
+
+    <mat-form-field>
+            <input matInput [matDatepicker]="myDatePicker2">
+            <mat-datepicker-toggle matSuffix [for]="myDatePicker2">
+                <mat-datepicker #myDatePicker2 startView="multi-year"></mat-datepicker>
+            </mat-datepicker-toggle>
+        </mat-form-field>    
+        
+
+    <mat-grid-list cols="2" rowHeight="40px"gutterSize="5" >
+        <mat-grid-tile colspan="2">
+            <a href="https://youtu.be/jUfEn032IL8?t=7519" target="blank">
+               Date picker 2:05:19
+            </a>
+        </mat-grid-tile>
+    </mat-grid-list>
+
+
+<mat-form-field>
+    <input matInput [matDatepicker]="myDatePicker">
+    <mat-datepicker-toggle matSuffix [for]="myDatePicker">
+        <mat-datepicker #myDatePicker></mat-datepicker>
+    </mat-datepicker-toggle>
+</mat-form-field>    
+
+
+<mat-grid-list cols="2" rowHeight="40px"gutterSize="5" >
+        <mat-grid-tile colspan="2">
+            <a href="https://youtu.be/jUfEn032IL8?t=7241" target="blank">
+               checkbox and radiobutton 2:00:$1
+            </a>
+        </mat-grid-tile>
+    </mat-grid-list>
+    <mat-checkbox>
+        Subscribe
+    </mat-checkbox>
+    <br>
+
+
+    <mat-checkbox labelPosition="before">
+            Subscribe Before
+        </mat-checkbox>
+        <br>
+        <mat-checkbox color="primary">
+                primary
+            </mat-checkbox>
+            <br>
+            <mat-checkbox color="warn">
+                    warn
+                </mat-checkbox>
+                <br>
+
+<mat-radio-group>
+    <mat-radio-button value="angular" color="primary">Angular</mat-radio-button>
+    <mat-radio-button value="React">React</mat-radio-button>
+    <mat-radio-button value="vue" color="warn">Vue</mat-radio-button>
+</mat-radio-group>
+
+                        
+
+<mat-grid-list cols="2" rowHeight="40px"gutterSize="5">
+        <mat-grid-tile colspan="2">
+            <a href="https://youtu.be/jUfEn032IL8?t=6941" target="blank">
+                Autocomplete with filter (very hard) 1:55:41
+                todo: review again is not working with the filer
+            </a>
+        </mat-grid-tile>
+    </mat-grid-list>
+
+    <form>
+        <mat-form-field>
+            <input type ="text" matInput [matAutocomplete]="auto"
+            [formControl]="myControl">
+            <mat-autocomplete #auto="matAutocomplete"
+            [displayWith]="displayFn">
+            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                {{option}}
+
+            </mat-option>
+        </mat-autocomplete>
+        </mat-form-field>
+    </form>
+
+
+<mat-grid-list cols="2" rowHeight="40px"gutterSize="5">
+        <mat-grid-tile colspan="2">
+            <a href="https://youtu.be/jUfEn032IL8?t=6851" target="blank">
+                Autocomplete with objects 1:54:11
+            </a>
+        </mat-grid-tile>
+    </mat-grid-list>
+
+    <form>
+        <mat-form-field>
+            <input type="text" matInput [matAutocomplete]="auto"/>
+            <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+            <mat-option *ngFor="let option of objectOptions" [value]="option">
+                {{option.name}}
+            </mat-option>
+            </mat-autocomplete>
+        </mat-form-field>
+    </form>
+    
+
+
+
+<mat-grid-list cols="2" rowHeight="40px"gutterSize="5">
+        <mat-grid-tile colspan="2">
+            <a href="https://youtu.be/jUfEn032IL8?t=6614">
+                Autocomplete 1:50:15
+            </a>
+        </mat-grid-tile>
+    </mat-grid-list>
+
+    <form>
+        <mat-form-field>
+            <input type="text" matInput [matAutocomplete]="auto"/>
+            <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let option of options" [value]="option">
+                {{option}}
+            </mat-option>
+            </mat-autocomplete>
+        </mat-form-field>
+    </form>
+    
+
+
+<mat-grid-list cols="2" rowHeight="40px"gutterSize="5">
+    <mat-grid-tile colspan="2">
+        <a href="https://youtu.be/jUfEn032IL8?t=6568">
+            Grouped. Multiple Select 1:49:28</a>
+    </mat-grid-tile>
+</mat-grid-list>
+    
+    <mat-form-field>
+            <mat-label>Grouped Topic</mat-label>
+            <mat-select [(value)]="selectedValue" multiple>
+                <mat-option>None</mat-option>
+                <mat-optgroup label="Web">
+                    <mat-option value="angular">Angular</mat-option>
+                    <mat-option value = "react">React</mat-option>
+                    <mat-option value = "vue">Vue</mat-option>
+                </mat-optgroup>
+                <mat-optgroup label="Mobile">
+                    <mat-option>None</mat-option>
+                    <mat-option value="mobile">Mobile</mat-option>
+                    <mat-option value = "iconic">Iconic</mat-option>
+                    <mat-option value = "reactnative">React Native</mat-option>
+            </mat-optgroup>
+
+            </mat-select>
+        </mat-form-field>
+
+
+
+<mat-grid-list cols="2" rowHeight="40px"gutterSize="5">
+        <mat-grid-tile colspan="2">
+            <a href="https://youtu.be/jUfEn032IL8?t=6486">
+                Grouped Select 1:48:06</a>
+        </mat-grid-tile>
+    </mat-grid-list>
+    
+    <mat-form-field>
+            <mat-label>Grouped Topic</mat-label>
+            <mat-select [(value)]="selectedValue">
+                <mat-option>None</mat-option>
+                <mat-optgroup label="Web">
+                    <mat-option value="angular">Angular</mat-option>
+                    <mat-option value = "react">React</mat-option>
+                    <mat-option value = "vue">Vue</mat-option>
+                </mat-optgroup>
+                <mat-optgroup label="Mobile">
+                    <mat-option>None</mat-option>
+                    <mat-option value="mobile">Mobile</mat-option>
+                    <mat-option value = "iconic">Iconic</mat-option>
+                    <mat-option value = "reactnative">React Native</mat-option>
+            </mat-optgroup>
+
+            </mat-select>
+        </mat-form-field>
+        
+
+
+
+<mat-grid-list cols="2" rowHeight="40px"gutterSize="5">
+    <mat-grid-tile colspan="2">
+        <a href="https://youtu.be/jUfEn032IL8?t=6242">Select (combos) </a>
+    </mat-grid-tile>
+</mat-grid-list>
+
+<mat-form-field>
+    <mat-label>Topic</mat-label>
+    <mat-select [(value)]="selectedValue">
+        <mat-option>None</mat-option>
+        <mat-option value="angular">Angular</mat-option>
+        <mat-option value = "react">React</mat-option>
+        <mat-option value = "vue">Vue</mat-option>
+    </mat-select>
+</mat-form-field>
+{{selectedValue}}
+
+<mat-grid-list cols="2" rowHeight="40px"gutterSize="5">
+    <mat-grid-tile colspan="2">
+        <a href="https://youtu.be/jUfEn032IL8?t=5905">Input 1:38:25</a>
+    </mat-grid-tile>
+</mat-grid-list>
+<mat-form-field>
+    <mat-label>Name</mat-label>
+    <input matInput>
+</mat-form-field>
+<h2>todo: how to integrate error messages </h2>
+
+<mat-form-field floatLabel="never">
+        <mat-label>Label never</mat-label>
+        <input matInput>
+    </mat-form-field>
+    
+
+    <mat-form-field >
+            <mat-label>required</mat-label>
+            <input matInput required>
+        </mat-form-field>
+    
+        <mat-form-field hideRequiredMarker>
+                <mat-label>not required marker visible</mat-label>
+                <input matInput required>
+            </mat-form-field>
+    
+    <mat-form-field >
+            <mat-label>field hint</mat-label>
+            <input matInput >
+            <mat-hint align="end">Min 5 characters</mat-hint>
+    </mat-form-field>
+    
+    <mat-form-field appearance="standard" >
+            <mat-label>standard appearance</mat-label>
+            <input matInput >
+            <mat-hint align="end">Min 5 characters</mat-hint>
+    </mat-form-field>
+
+
+    <mat-form-field appearance="fill" color="accent">
+            <mat-label>fill appearance</mat-label>
+            <input matInput >
+            <mat-hint align="end">Min 5 characters</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" >
+            <mat-label>outline appearance</mat-label>
+            <input matInput >
+            <mat-hint align="end">Min 5 characters</mat-hint>
+    </mat-form-field>
+
+
+
+<mat-grid-list cols="2" rowHeight="40px"gutterSize="5">
+    <mat-grid-tile colspan="2">
+        <a href="https://youtu.be/jUfEn032IL8?t=5817">Vertical Stepper 1:36:57</a>
+    </mat-grid-tile>
+</mat-grid-list>
+
+<mat-vertical-stepper>
+    <mat-step label="Shipping Address">Shipping Address</mat-step>    
+    <mat-step label="Billing Address">Billing Address
+        <div>
+            <button mat-button matStepperPrev>Back</button>
+            <button mat-button matStepperNext>Next</button>
+        </div>
+        
+    </mat-step>    
+    <mat-step label="Order Details">Order Details</mat-step>    
+</mat-vertical-stepper>
+
+
+
+
+<mat-grid-list cols="2" rowHeight="40px"gutterSize="5">
+    <mat-grid-tile colspan="2">
+        <a href="https://youtu.be/jUfEn032IL8?t=5493">Steppers 1:31:33</a>
+    </mat-grid-tile>
+</mat-grid-list>
+
+<mat-horizontal-stepper>
+    <mat-step label="Shipping Address">Shipping Address</mat-step>    
+    <mat-step label="Billing Address">Billing Address
+        <div>
+            <button mat-button matStepperPrev>Back</button>
+            <button mat-button matStepperNext>Next</button>
+        </div>
+        
+    </mat-step>    
+    <mat-step label="Order Details">Order Details</mat-step>    
+</mat-horizontal-stepper>
+
+
 <mat-grid-list cols="2" rowHeight="40px"gutterSize="5">
     <mat-grid-tile colspan="2">
         <a href="https://youtu.be/jUfEn032IL8?t=5291">Tabs 1:28:11</a>
     </mat-grid-tile>
 </mat-grid-list>
 
-<mat-tab-group #tabRef (selectedTabChange)="log(tabRef.selectedIndex">
+<mat-tab-group #tabRef (selectedTabChange)="log(tabRef.selectedIndex)">
     <mat-tab label="Angular">Angular content</mat-tab>
     <mat-tab label="React">React content</mat-tab>
     <mat-tab label="View">View content</mat-tab>
