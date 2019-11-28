@@ -1,13 +1,161 @@
+<mat-grid-list cols="2" rowHeight="40px"gutterSize="5" >
+        <mat-grid-tile>
+                <a href="https://youtu.be/jUfEn032IL8?t=10700" target="blank">
+                  Virtual Scrolling 2:58:20
+                </a>
+            </mat-grid-tile>
+        </mat-grid-list>
+    <br>
+
+    <cdk-virtual-scroll-viewport itemSize="100" class="container">
+            <div *cdkVirtualFor="let number of numbers" class="number">
+                    {{number}}
+                </div>
+            
+    </cdk-virtual-scroll-viewport>
+
+    
+
+
+<mat-form-field>
+    <input matInput placehodler="Filter"
+    (keyup)="applyFilter($event.target.value)"
+    >
+</mat-form-field>
+
+<mat-grid-list cols="2" rowHeight="40px"gutterSize="5" >
+    <mat-grid-tile colspan="2">
+        <a href="https://youtu.be/jUfEn032IL8?t=9751" target="blank">
+          Exploring data table 2:42:31 </a>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <a href="https://youtu.be/jUfEn032IL8?t=10057" target="blank">
+            Data Table FIltering 2:47:37
+          </a>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <a href="https://youtu.be/jUfEn032IL8?t=10304" target="blank">
+            DatA Table SORTING 2:51:44
+            todo: checkit didint work
+          </a>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <a href="https://youtu.be/jUfEn032IL8?t=10512" target="blank">
+            DatA Table pagination 2:55:12 DIDINT WORK
+          </a>
+      </mat-grid-tile>
+  </mat-grid-list>
+<br>
+<div class="mat-elevation-z8">
+        <mat-table [dataSource]="dataSource" 
+    matSort
+    >
+    <!-- Position Column -->
+    <ng-container matColumnDef="position">
+      <mat-header-cell matSortHeader
+       *matHeaderCellDef> No. </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <mat-header-cell matSortHeader
+        *matHeaderCellDef> Name </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="weight">
+      <mat-header-cell matSortHeader
+      *matHeaderCellDef> Weight </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="symbol">
+      <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
+    </ng-container>
+  
+    <mat-header-row *matHeaderRowDef="displayedColumns2"></mat-header-row>
+    <mat-row (click)="logData(row)"
+     *matRowDef="let row; columns: displayedColumns2;"></mat-row>
+  </mat-table>
+  <!--
+<mat-paginator [pageSizeOptions='[5,10,20]']
+  showFirstLastButtons>
+</mat-paginator>
+-->
+</div>
+
+<mat-grid-list cols="2" rowHeight="40px"gutterSize="5" >
+    <mat-grid-tile colspan="2">
+        <a href="https://youtu.be/jUfEn032IL8?t=9222" target="blank">
+        <a href="https://material.angular.io/components/table/examples">Material Design Table</a>
+          Data Tables 2:33:42
+        </a>
+    </mat-grid-tile>
+</mat-grid-list>
+<br>
+
+
+<mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <!-- Position Column -->
+    <ng-container matColumnDef="position">
+      <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="weight">
+      <mat-header-cell *matHeaderCellDef> Weight </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="symbol">
+      <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
+    </ng-container>
+  
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+
 
 
 <mat-grid-list cols="2" rowHeight="40px"gutterSize="5" >
-        <mat-grid-tile colspan="2">
-            <a href="https://youtu.be/jUfEn032IL8?t=8564" target="blank">
-              snack bar customized with another component 2:22:44
-            </a>
-        </mat-grid-tile>
-    </mat-grid-list>
-    <button mat-button (click)="openCustomSnackBar()">Cusstom snack bar</button>
+    <mat-grid-tile colspan="2">
+        <a href="https://youtu.be/jUfEn032IL8?t=8649" target="blank">
+          DIalogs 2:24:09
+        </a>
+    </mat-grid-tile>
+</mat-grid-list>
+<br>
+<button mat-raised-button (click)="openDialog()">Open DIalog</button>
+<h2>didint work passing parameters. todo: CHECK IT</h2>
+
+
+<mat-grid-list cols="2" rowHeight="40px"gutterSize="5" >
+    <mat-grid-tile colspan="2">
+        <a href="https://youtu.be/jUfEn032IL8?t=8544" target="blank">
+          custom snack bar 2:22:24 (notifications)
+        </a>
+        
+    </mat-grid-tile>
+</mat-grid-list>
+<br>
+<h4>didint work with inline component, create ng g c custom-snackbar</h4>
+<button mat-button (click)="openCustomSnackBar()">
+    SHow CUstom Snack Bar
+</button>
+
 
 
 
